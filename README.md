@@ -6,4 +6,4 @@
 
 下面是视频好的二维码，感兴趣可以扫开看看，点个赞更好了。
 
-![](https://tva1.sinaimg.cn/large/007S8ZIlgy1ggmss9hw3mj30l80qowgg.jpg)
+https://tva1.sinaimg.cn/large/007S8ZIlgy1ggmt41nw96j308c08cdge.jpg
