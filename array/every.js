@@ -1,6 +1,6 @@
-const numbers = [1, 2, 3, 4, 5];
+const countries = ['China', 'USA', 'Russion'];
 
 
-const re = numbers.some(value => value > 2);
+const re = countries.join(' , ');
 
 console.log(re)
