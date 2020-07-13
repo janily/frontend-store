@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>time relative</title>
+  </head>
+  <body>
+    <h3>相对时间格式化</h3>
+    <h1 id="time"></h1>
+  </body>
+  <script>
+    window.onload = function () {
+      // 或 'zh-Hans-CN'
+      const rtf = new Intl.RelativeTimeFormat("zh");
+
+      const time_node = document.querySelector("#time");
+
+      time_node.innerHTML = rtf.format(-15, "day");
+    };
+  </script>
+</html>
