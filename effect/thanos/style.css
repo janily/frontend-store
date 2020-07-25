@@ -1,0 +1,128 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 180px;
+}
+.disintegration-container {
+  position: absolute;
+  pointer-events: none;
+}
+.disintegration-container > canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
+  transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  transition: transform 1s ease-out, opacity 1s ease-out,
+    -webkit-transform 1s ease-out;
+  opacity: 1;
+  -webkit-transform: rotate(0deg) translate(0px, 0px) rotate(0deg);
+  transform: rotate(0deg) translate(0px, 0px) rotate(0deg);
+}
+
+@keyframes debug-pulse {
+  0% {
+    -webkit-filter: none;
+    filter: none;
+  }
+  95% {
+    -webkit-filter: none;
+    filter: none;
+  }
+  95% {
+    -webkit-filter: drop-shadow(0 1px 0 red);
+    filter: drop-shadow(0 1px 0 red);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 1px 0 red);
+    filter: drop-shadow(0 1px 0 red);
+  }
+}
+
+.thnos img {
+  height: 427px;
+}
+
+.snap {
+  position: absolute;
+  top: 0;
+  left: -12px;
+  height: 80px;
+  width: 80px;
+  background-image: url(./thanos_snap.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  animation: snaps 2s steps(47);
+}
+.hide {
+  display: none;
+}
+.thnos-snap {
+  top: 200px;
+  left: 300px;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.times-snap {
+  top: 200px;
+  left: 800px;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.thnos-snap img {
+  cursor: pointer;
+  position: absolute;
+  left: -12px;
+  height: 80px;
+  width: 80px;
+  user-select: none;
+}
+
+@keyframes snaps {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.time {
+  position: absolute;
+  top: 0;
+  left: -12px;
+  height: 80px;
+  width: 80px;
+  background-image: url(./thanos_time.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  animation: effect 2s steps(47);
+}
+
+@keyframes effect {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.times-snap img {
+  cursor: pointer;
+  position: absolute;
+  left: -12px;
+  height: 80px;
+  width: 80px;
+  user-select: none;
+}
