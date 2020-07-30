@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>magic line nav</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <nav>
-        <div id="marker"></div>
-        <a href="#">首页</a>
-        <a href="#">关于</a>
-        <a href="#">服务</a>
-        <a href="#">产品</a>
-        <a href="#">联系我们</a>
+      <div id="marker"></div>
+      <a href="#">首页</a>
+      <a href="#">关于</a>
+      <a href="#">服务</a>
+      <a href="#">产品</a>
+      <a href="#">联系我们</a>
     </nav>
     <script>
-        var marker = document.querySelector('#marker');
-        var item = document.querySelectorAll('nav a');
-        
-
-        function indicator(e) {
-            let pos = e.offsetLeft;
-            marker.style.width = e.offsetWidth + "px";
-            marker.style.transform = `translateX(${pos}px)`;
-            
-        }
-
-        item.forEach(link => {
-            link.addEventListener('click', (e) => {
-                indicator(e.target);
-            })
-        })
+      var marker = document.querySelector("#marker");
+      var item = document.querySelectorAll("nav a");
+      function indicator(e) {
+        let pos = e.offsetLeft;
+        marker.style.width = e.offsetWidth + "px";
+        marker.style.transform = `translateX(${pos}px)`;
+      }
+      item.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          indicator(e.target);
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
