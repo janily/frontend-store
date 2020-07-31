@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heart</title>
+    <style>
+        body {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="heart" height="300" width="300"></canvas>
+    <script>
+        const canvas = document.getElementById("heart");
+        const ctx = canvas.getContext("2d");
+
+        // 绘制心形
+        const heart = (ctx, x=150, y= 130, a=9) => {
+
+            const vectors = []
+            for(let i = 0;i<50; i++) {
+                //心上两点角度，
+                const step = i / 50 * (Math.PI*2);
+                const vector = {
+                    x: a * (16 * Math.pow(Math.sin(step), 3)),
+                    y: a * (13*Math.cos(step) - 5 * Math.cos(2*step) - 2 * Math.cos(3*step) - Math.cos(4*step))
+                }
+                
+                vectors.push(vector)
+                
+            }
+
+            //return vectors//
+
+            ctx.save();
+            ctx.beginPath();
+            ctx.translate(x,y);
+            ctx.rotate(Math.PI)
+            for(let i = 0; i < 50; i++) {
+                const vector = vectors[i];
+                ctx.lineTo(vector.x,vector.y);
+            }
+
+            ctx.strokeStyle = 'rgba(186,165,130,0.3)';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            ctx.restore();
+            ctx.clip()
+        }
+
+        heart(ctx)
+
+
+        const drawWave = () => {
+
+        }
+    </script>
+</body>
+</html>
