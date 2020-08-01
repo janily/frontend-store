@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --bubble_time: 3s;
+  --bubble_scale: 0.8s;
+  background: #159957; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #155799,
+    #159957
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #155799,
+    #159957
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.praise_bubble {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.bl-wrap {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  bottom: 0;
+}
+.bubble {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-image: url(./images/bg1.png);
+}
+.bl-wrap {
+  animation: bubble_y var(--bubble_time) linear 1 forwards;
+}
+.bubble {
+  animation: bubble_big_1 var(--bubble_scale) linear 1 forwards;
+}
+.b2 {
+  background-image: url(./images/bg2.png);
+}
+.b3 {
+  background-image: url(./images/bg3.png);
+}
+.b4 {
+  background-image: url(./images/bg4.png);
+}
+.b5 {
+  background-image: url(./images/bg5.png);
+}
+.b6 {
+  background-image: url(./images/bg6.png);
+}
+.bl1 {
+  animation: bubble_1 var(--bubble_time) linear 1 forwards;
+}
+.bl2 {
+  animation: bubble_2 var(--bubble_scale) linear 1 forwards;
+}
+.bl3 {
+  animation: bubble_3 var(--bubble_scale) linear 1 forwards;
+}
+.bl4 {
+  animation: bubble_4 var(--bubble_scale) linear 1 forwards;
+}
+.bl5 {
+  animation: bubble_5 var(--bubble_scale) linear 1 forwards;
+}
+.bl6 {
+  animation: bubble_6 var(--bubble_scale) linear 1 forwards;
+}
+.bl7 {
+  animation: bubble_7 var(--bubble_scale) linear 1 forwards;
+}
+.bl8 {
+  animation: bubble_8 var(--bubble_scale) linear 1 forwards;
+}
+.bl9 {
+  animation: bubble_9 var(--bubble_scale) linear 1 forwards;
+}
+.bl10 {
+  animation: bubble_10 var(--bubble_scale) linear 1 forwards;
+}
+.bl11 {
+  animation: bubble_11 var(--bubble_scale) linear 1 forwards;
+}
+@keyframes bubble_y {
+  0% {
+    transform: translateY(0);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-400px);
+    opacity: 0;
+  }
+}
+
+@keyframes bubble_big_1 {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bubble_1 {
+  0% {
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  75% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+@keyframes bubble_11 {
+  0% {
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(-18px);
+  }
+}
+@keyframes bubble_10 {
+  0% {
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes bubble_9 {
+  0% {
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+@keyframes bubble_8 {
+  0% {
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+@keyframes bubble_7 {
+  0% {
+  }
+  25% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(1px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(3px);
+  }
+}
+@keyframes bubble_6 {
+  0% {
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(-1px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(-3px);
+  }
+}
+@keyframes bubble_5 {
+  0% {
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes bubble_4 {
+  0% {
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+@keyframes bubble_3 {
+  0% {
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+@keyframes bubble_2 {
+  0% {
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(25px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
