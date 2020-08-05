@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+h2 {
+  color: #fff;
+  font-family: Sans-Serif;
+  font-size: 12em;
+  animation: tiktok 0.5s linear infinite;
+}
+
+@keyframes tiktok {
+  0%,
+  100% {
+    text-shadow: -3.5px -3.5px 0 #0ff, 3.5px 3.5px 0 #f00;
+  }
+  25% {
+    text-shadow: 3.5px 3.5px 0 #0ff, -3.5px -3.5px 0 #f00;
+  }
+  50% {
+    text-shadow: 3.5px -3.5px 0 #0ff, -3.5px 3.5px 0 #f00;
+  }
+  75% {
+    text-shadow: -3.5px 3.5px 0 #0ff, 3.5px -3.5px 0 #f00;
+  }
+}
