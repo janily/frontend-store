@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cut down timer</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="bgimg">
+      <div class="overlay"></div>
+      <div class="middle">
+        <h1>敬请期待</h1>
+        <hr />
+        <p id="demo" style="font-size: 30px;"></p>
+      </div>
+    </div>
+    <script>
+      // 设置倒计时的时间期限
+      var countDownDate = new Date("Aug 31, 2020 00:00:00").getTime();
+      // 每秒更新时间
+      let countDownfunction = setInterval(function () {
+        let now = new Date().getTime();
+        // 获取目标时间与现在时间的距离
+        let distance = countDownDate - now;
+
+        // 计算时间
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        //输出
+        document.getElementById("demo").innerHTML =
+          days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds + "秒 ";
+
+        // 如果到时间了，显示的文字
+        if (distance < 0) {
+          clearInterval(countDownfunction);
+          document.getElementById("demo").innerHTML = "来了";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

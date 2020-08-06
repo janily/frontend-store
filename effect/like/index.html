@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>like effect</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="praise_bubble" id="praise_bubble">
+      <div class="bl-wrap">
+        <div class="bl-inner">
+          <div class="bubble bl1"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let praiseBubble = document.getElementById("praise_bubble");
+      let last = 0;
+      function addPraise() {
+        const b = Math.floor(Math.random() * 6) + 1;
+        const bl = Math.floor(Math.random() * 11) + 1; // bl1~bl11
+
+        let d = document.createElement("div");
+        let d_inner = document.createElement("div");
+        let dl = document.createElement("div");
+        dl.className = `bubble b${b}`;
+        d_inner.className = `bl-inner bl${bl}`;
+
+        // d.className = `bubble b${b} bl${bl}`;
+        d.className = `bl-wrap`;
+        d.dataset.t = String(Date.now());
+        praiseBubble.appendChild(d);
+        d.appendChild(d_inner);
+        d_inner.appendChild(dl);
+      }
+      setInterval(() => {
+        addPraise();
+      }, 200);
+    </script>
+  </body>
+</html>
