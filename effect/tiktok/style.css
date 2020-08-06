@@ -18,15 +18,15 @@ h2 {
 @keyframes tiktok {
   0%,
   100% {
-    text-shadow: -3.5px -3.5px 0 #0ff, 3.5px 3.5px 0 #f00;
+    text-shadow: -5.5px -5.5px 0 #0ff, 5.5px 5.5px 0 #f00;
   }
   25% {
-    text-shadow: 3.5px 3.5px 0 #0ff, -3.5px -3.5px 0 #f00;
+    text-shadow: 5.5px 5.5px 0 #0ff, -5.5px -5.5px 0 #f00;
   }
   50% {
-    text-shadow: 3.5px -3.5px 0 #0ff, -3.5px 3.5px 0 #f00;
+    text-shadow: 5.5px -5.5px 0 #0ff, -5.5px 5.5px 0 #f00;
   }
   75% {
-    text-shadow: -3.5px 3.5px 0 #0ff, 3.5px -3.5px 0 #f00;
+    text-shadow: -5.5px 5.5px 0 #0ff, 5.5px -5.5px 0 #f00;
   }
 }
