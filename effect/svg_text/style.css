@@ -1,0 +1,25 @@
+body {
+  background-color: #fff;
+}
+
+svg path {
+  fill: none;
+  stroke: firebrick;
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
+  transition: all 2s linear;
+}
+
+.stroke-ani {
+  stroke-dashoffset: 0;
+  animation: s-ani 2s linear forwards;
+}
+
+@keyframes s-ani {
+  0% {
+    stroke-dashoffset: 10000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
