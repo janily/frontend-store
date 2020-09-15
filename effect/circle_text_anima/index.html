@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>circle scroll animation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="circular-text">
+      <span id="rotated"> 滑动我，转圈圈哦，快来一起滑动玩耍吧！ </span>
+    </div>
+    <div class="arrow"></div>
+    <script src="./circletype.min.js"></script>
+    <script>
+      const circleType = new CircleType(
+        document.querySelector("#rotated")
+      ).radius(100);
+
+      window.addEventListener("scroll", function () {
+        const offset = window.scrollY * 0.4;
+        console.log(offset);
+        const circle_text = document.querySelector(".circular-text");
+        circle_text.style.transform = `rotate(${offset}deg)`;
+      });
+    </script>
+  </body>
+</html>
