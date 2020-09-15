@@ -4,7 +4,14 @@ body {
   padding: 0;
   width: 100%;
   min-height: 200vh;
-  background-color: #161616;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
 }
 
 .circular-text {
