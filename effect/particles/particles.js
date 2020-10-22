@@ -1,69 +1,66 @@
-var canvas = document.getElementById("scene");
+var canvas = document.getElementById("scence");
 var ctx = canvas.getContext("2d");
-var particles = [];
+var particles = []
 
-function drawScene() {
-  canvas.width = png.width * 3;
-  canvas.height = png.height * 3;
-  ctx.drawImage(png, 0, 0);
-  // var my_gradient = ctx.createLinearGradient(0, 170, 170, 0);
-  // my_gradient.addColorStop(0, "red");
-  // my_gradient.addColorStop(0.3, "orange");
-  // my_gradient.addColorStop(0.5, "yellow");
-  // my_gradient.addColorStop(0.7, "green");
-  // my_gradient.addColorStop(0.9, "blue");
+function drawSence() {
+    canvas.width = png.width * 3;
+    canvas.height = png.height * 3;
 
-  // my_gradient.addColorStop(1, "purple");
+    ctx.drawImage(png, 0 ,0);
 
-  ctx.fillStyle = "blue";
-  var data = ctx.getImageData(0, 0, png.width, png.height);
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (var y = 0, y2 = data.height; y < y2; y++) {
-    for (var x = 0, x2 = data.width; x < x2; x++) {
-      var p = y * 4 * data.width + x * 4;
-      if (data.data[p + 3] > 129) {
-        var particle = {
-          x0: x,
-          y0: y,
-          x1: png.width / 2,
-          y1: png.height / 2,
-          speed: Math.random() * 4 + 2,
-          color:
-            "rgb(" +
-            data.data[p] +
-            "," +
-            data.data[p + 1] +
-            "," +
-            data.data[p + 2] +
-            ")"
-        };
-        TweenMax.to(particle, particle.speed, {
-          x1: particle.x0,
-          y1: particle.y0,
-          delay: y / 30,
-          ease: Elastic.easeOut
-        });
-        particles.push(particle);
-      }
+    ctx.fillStyle = "#0052D9";
+
+    var data = ctx.getImageData(0,0,png.width,png.height);
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    for(var y = 0, y2 = data.height; y < y2; y++) {
+        for (var x = 0, x2 = data.width; x < x2; x++) {
+            var p = y * 4 * data.width + x * 4;
+            if (data.data[p + 3] > 129) {
+              var particle = {
+                x0: x,
+                y0: y,
+                x1: png.width / 2,
+                y1: png.height / 2,
+                speed: Math.random() * 4 + 2,
+                color:
+                  "rgb(" +
+                  0 +
+                  "," +
+                  82 +
+                  "," +
+                  217 +
+                  ")"
+              };
+              TweenMax.to(particle, particle.speed, {
+                x1: particle.x0,
+                y1: particle.y0,
+                delay: y / 30,
+                ease: Elastic.easeOut
+              });
+              particles.push(particle);
+            }
+        }
     }
-  }
-  requestAnimationFrame(render);
+
+    requestAnimationFrame(render);
 }
-var render = function () {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (var i = 0, j = particles.length; i < j; i++) {
-    var particle = particles[i];
-    //uncomment if you want to use image colors instead of gradient
-    //ctx.fillStyle = particle.color;
-    ctx.fillRect(particle.x1 * 3, particle.y1 * 3, 2, 2);
-  }
-  requestAnimationFrame(render);
-};
+
+var render = function() {
+    ctx.clearRect(0,0,canvas.widht,canvas.height);
+    for (var i = 0, j = particles.length; i < j; i++) {
+        var particle = particles[i];
+        ctx.fillRect(particle.x1 * 3, particle.y1 * 3, 2, 2);
+      }
+
+      requestAnimationFrame(render);
+}
 
 var clearFrame = function () {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles = [];
-  drawScene();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles = [];
+    drawScene();
 };
 
 const png1 = "data:image/png;base64,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"
@@ -72,4 +69,4 @@ const png3 = "./qq.png"
 
 var png = new Image();
 png.onload = drawScene;
-png.src = png1;
+png.src = png3;
