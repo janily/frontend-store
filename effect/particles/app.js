@@ -6,14 +6,14 @@ function drawScene() {
   canvas.width = png.width * 3;
   canvas.height = png.height * 3;
   ctx.drawImage(png, 0, 0);
-  var my_gradient = ctx.createLinearGradient(0, 170, 170, 0);
-  my_gradient.addColorStop(0, "red");
-  my_gradient.addColorStop(0.3, "orange");
-  my_gradient.addColorStop(0.5, "yellow");
-  my_gradient.addColorStop(0.7, "green");
-  my_gradient.addColorStop(0.9, "blue");
+  // var my_gradient = ctx.createLinearGradient(0, 170, 170, 0);
+  // my_gradient.addColorStop(0, "red");
+  // my_gradient.addColorStop(0.3, "orange");
+  // my_gradient.addColorStop(0.5, "yellow");
+  // my_gradient.addColorStop(0.7, "green");
+  // my_gradient.addColorStop(0.9, "blue");
 
-  my_gradient.addColorStop(1, "purple");
+  // my_gradient.addColorStop(1, "purple");
 
   ctx.fillStyle = "#0052D9";
   var data = ctx.getImageData(0, 0, png.width, png.height);
