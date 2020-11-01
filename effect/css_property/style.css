@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+  padding-top: 300px;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+div {
+  transition: --num 5s;
+  counter-set: num var(--num);
+  font: 800 100px system-ui;
+}
+div::after {
+  content: counter(num);
+}
+div:hover {
+  --num: 100;
+}
+
+body {
+  margin: 2rem;
+}
