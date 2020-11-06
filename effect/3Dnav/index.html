@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Nav</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="menu">
+        <h3 class="logo">未<span>来</span></h3>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="main">
+        <header>
+          <div class="overlay">
+            <div class="inner">
+              <h2 class="title">未来已来</h2>
+              <p>
+                未来已来，Just do it !!!
+              </p>
+              <button class="btn">更多</button>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <div class="shadow one"></div>
+      <div class="shadow two"></div>
+    </div>
+
+    <div class="links">
+      <ul>
+        <li>
+          <a href="#" style="--i: 0.05s;">首页</a>
+        </li>
+        <li>
+          <a href="#" style="--i: 0.1s;">服务</a>
+        </li>
+        <li>
+          <a href="#" style="--i: 0.15s;">资料</a>
+        </li>
+        <li>
+          <a href="#" style="--i: 0.25s;">关于</a>
+        </li>
+        <li>
+          <a href="#" style="--i: 0.3s;">联系我们</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    const hamburger_menu = document.querySelector(".hamburger-menu");
+    const container = document.querySelector(".container");
+
+    hamburger_menu.addEventListener("click", () => {
+      container.classList.toggle("active");
+    });
+
+  </script>
+</body>
+</html>
