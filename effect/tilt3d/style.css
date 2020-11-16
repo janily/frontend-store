@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans";
+  background: #e7e7e7;
+  margin-top: 15%;
+}
+
+.flex-container,
+.c-logo {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-content: stretch;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.c-logo {
+  width: 300px;
+  height: 300px;
+  background-color: #7e56ff;
+  background-image: linear-gradient(
+    150deg,
+    #5a00ff 0%,
+    #ff1ff7 100%,
+    #ff1ff7 100%
+  );
+  box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
+  color: white;
+  text-decoration: none;
+  font-size: 4em;
+  font-weight: 300;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: perspective(500px);
+  transform: perspective(500px);
+  box-shadow: 0 20px 70px -10px rgba(0, 0, 0, 0.7),
+    0 50px 100px 0 rgba(0, 0, 0, 0.2);
+}
+.c-logo > span {
+  display: block;
+  -webkit-transform: translateZ(50px) scale(0.6);
+  transform: translateZ(50px) scale(0.6);
+  text-shadow: -2px -1px 2px #969696;
+}
+.c-logo:hover:after {
+  -webkit-transform: translateZ(-100px);
+  transform: translateZ(-100px);
+}
